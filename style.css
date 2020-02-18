@@ -1,0 +1,698 @@
+body, html {
+    margin:0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #212121;
+
+  }
+  * {
+    box-sizing: border-box;
+    list-style-type: none;
+    transition: all ease-in-out 250ms;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display:block;
+    }
+
+   /* 
+========================
+TYPOGRAPHY
+========================
+*/
+
+h1 {
+    font-weight: 700;
+    font-size: 80px;
+    padding-top: 150px;
+    text-transform: uppercase;
+}
+h1 span {
+  color: #00DE59;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+  padding-top: 50px;
+}
+
+h3 {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+@media (max-width:800px) {
+
+h1 {
+  font-size: 40px;
+  padding: 10px;
+  padding-top: 150px;
+}
+
+h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+
+}
+
+
+   /* 
+========================
+BUTTONS
+========================
+*/
+
+.button {
+  border-radius: 15px 50px;
+  background-color: #00DE59;
+  padding: 30px;
+  width: 500px;
+  height: 100px;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Inconsolata', monospace;
+  margin-top: 100px;
+}
+
+.button:hover {
+color: white;
+background-color: #212121;
+transition: all 0.3s;
+}
+
+
+.button-services {
+  height: 80px;
+  width: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+@media (max-width:500px) {
+.button {
+  width: 300px;
+  font-size: 20px;
+  height: 70px;
+  padding: 20px;
+}
+}
+
+  /* 
+========================
+NAV BAR
+========================
+*/
+.navbar {
+
+    font-size: 20px;
+    
+}
+
+.navbar li {
+  padding-left: 30px;
+}
+
+
+
+
+  /* 
+========================
+FLEXBOX
+========================
+*/
+
+.flex-container {
+    display: flex;
+    align-items: stretch;
+    
+  }
+
+  @media (max-width:800px) {
+    .flex-container {
+        flex-wrap: wrap;
+        flex: 100%;
+  max-width: 100%;
+    }
+    }
+
+
+   /* 
+========================
+HOME HERO
+========================
+*/
+    .parallax {
+        /* The image used */
+        background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://cms.qz.com/wp-content/uploads/2017/10/img_2811.jpg?quality=75&strip=all&w=1600&h=900&crop=1);
+      
+        /* Set a specific height */
+        min-height: 800px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+
+  /* 
+========================
+HOME SERVICES
+========================
+*/
+
+.services {
+  
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.service1 {
+    flex-basis: 33.33%;
+    background-color: #212121;
+}
+
+.service2 {
+    flex-basis: 33.33%;
+    background-color: #212121;
+}
+
+.service3 {
+    flex-basis: 33.33%;
+    background-color: #212121;
+}
+
+@media (max-width:800px) {
+    .service1 {
+        flex-basis: 100%;
+    }
+    .service2 {
+        flex-basis: 100%;
+    }
+    .service3 {
+        flex-basis: 100%;
+    }
+}
+
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.btn-one {
+  color: white;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+.box-1 { 
+  background-color: rgba(0, 222, 89, 0.5); 
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-top: 30px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  padding: 20px;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: rgba(255,255,255,0.2);
+  color: black;
+  font-size: 26px;
+  padding: 20px 60px;
+}
+
+
+@media (max-width:600px) {
+
+.text {
+  padding: 0;
+}
+
+.box-1 {
+  background-color: rgba(0, 222, 89, 0.5);
+}
+
+.container .image {
+  opacity: 0.3;
+}
+
+.container .middle {
+  opacity: 1;
+}
+
+.services {
+  margin: 0;
+}
+.image {
+padding: 0px;
+padding-top: 10px;
+}
+}
+
+
+
+  /* 
+========================
+HOME TESTIMONIALS
+========================
+*/
+.testimonials-parallax {
+height: 30vh;
+}
+.carousel-inner img {
+  border-radius: 50%;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+
+.testimonials p {
+  margin-bottom: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+}
+
+.testimonials h2 {
+  padding-top: 120px;
+}
+@media (min-width:1000px) {
+  .carousel-inner img {
+
+    width: 200px;
+  }
+
+  .testimonials p {
+    font-size: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  .testimonials h2 {
+    padding-top: 100px;
+  }
+}
+
+  /* 
+========================
+HOME GALLERY
+========================
+*/
+.home-gallery {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .home-gallery {
+    margin: 0;
+  }
+}
+
+
+  /* 
+========================
+HOME CTA
+========================
+*/
+
+.cta {
+  background-color: #00DE59;
+  height: 30vh;
+}
+
+@media screen and (max-width: 800px) {
+  .cta {
+   
+    height: 40vh;
+  }
+
+}
+
+
+
+  /* 
+========================
+FOOTER
+========================
+*/
+footer {
+  padding: 50px;
+}
+
+.left {
+  flex-basis: 33.33%;
+  background-color: #212121;
+}
+
+.center {
+  flex-basis: 33.33%;
+  background-color: #212121;
+}
+
+.right {
+  flex-basis: 33.33%;
+  background-color: #212121;
+}
+
+@media (max-width:800px) {
+  .left {
+      flex-basis: 100%;
+  }
+  .center {
+      flex-basis: 100%;
+  }
+  .right {
+      flex-basis: 100%;
+  }
+}
+
+.end {
+  background-color: black;
+  font-size: 10px;
+}
+
+
+
+  /* 
+================================================================
+ABOUT PAGE
+========================
+*/
+
+
+
+
+  /* 
+========================
+HOME HERO 
+========================
+*/
+
+.parallax-about {
+  /* The image used */
+  background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://thumbs-prod.si-cdn.com/_tN9htZHZVpEuC_41mJhOpX-QKM=/fit-in/1600x0/https://public-media.si-cdn.com/filer/06/9c/069cfb16-c46c-4742-85f0-3c7e45fa139d/mar2018_a05_talkingtrees.jpg);
+
+  /* Set a specific height */
+  min-height: 400px; 
+
+}
+
+
+
+  /* 
+========================
+ABOUT US 
+========================
+*/
+
+.about-txt  {
+  flex-basis: 50%;
+}
+
+.about-img  {
+  flex-basis: 50%;
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.mjc-treesurgeons.co.uk/wp-content/uploads/2018/09/shutterstock_345413507-3.jpg);
+}
+
+.about-txt p {
+  padding: 150px;
+  font-size: 20px;
+}
+
+.about-img2 {
+  
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://conversation.which.co.uk/wp-content/uploads/2015/10/treesurgeon.png);
+}
+
+.box-2 {
+  margin-top: 200px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+
+
+@media (max-width:800px) {
+  .about-txt {
+  
+    flex-basis: 100%;
+  }
+
+  .about-txt p {
+    padding: 50px;
+  }
+  .about-img {
+    flex-basis: 100%;
+    height: 50vh;
+  }
+
+  .box-2 {
+    margin: 0;
+    margin-top: 40%;
+  }
+}
+
+
+
+
+  /* 
+================================================================
+GALLERY
+========================
+*/
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.container1{
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 222, 89, 0.5);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: rgba(0, 222, 89, 0.5);
+  padding: 2px 16px;
+  color: white;
+  font-size: 20px;
+}
+
+.rowa:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.columna {
+  float: left;
+  width: 16.66%;
+  padding: 10px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.gallery-txt  {
+  padding: 20px;
+
+  
+}
+
+@media (min-width:1000px) {
+  .gallery-slideshow {
+   
+  margin-left: 250px;
+  margin-right: 250px;
+  }
+ 
+  .gallery-txt  {
+    padding: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+    
+  }
+ 
+}
