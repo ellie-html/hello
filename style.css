@@ -3,13 +3,13 @@ body, html {
     padding: 0;
     max-width: 100%;
     overflow-x: hidden;
-    
+    background-color: #212121;
   }
   body {
     font-family: "Montserrat", sans-serif;
     text-align: center;
     color: white;
-    background-color: #212121;
+    
 
   }
   * {
@@ -35,9 +35,20 @@ h1 {
     font-size: 80px;
     padding-top: 150px;
     text-transform: uppercase;
+
 }
 h1 span {
-  color: #00DE59;
+  background: linear-gradient(to right, #11998e 0%, #38ef7d 100%);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+.titles {
+  background: linear-gradient(to right, #11998e 0%, #38ef7d 100%);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -3px -3px white;
 }
 
 h2 {
@@ -45,6 +56,8 @@ h2 {
   font-size: 40px;
   padding-top: 50px;
 }
+
+
 
 h3 {
   margin-left: 150px;
@@ -57,6 +70,10 @@ h1 {
   font-size: 40px;
   padding: 10px;
   padding-top: 150px;
+}
+
+h2 {
+  font-size: 25px;
 }
 
 h3 {
@@ -75,45 +92,159 @@ BUTTONS
 ========================
 */
 
-.button {
-  border-radius: 15px 50px;
-  background-color: #00DE59;
-  padding: 30px;
-  width: 500px;
-  height: 100px;
-  text-decoration: none;
-  color: black;
-  font-size: 30px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Inconsolata', monospace;
-  margin-top: 100px;
+
+
+
+
+.button-top {
+  background-color:#212121;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 50px;
 }
 
-.button:hover {
-color: white;
-background-color: #212121;
-transition: all 0.3s;
+.button-top span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button-top span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button-top:hover span {
+  padding-right: 25px;
+}
+
+.button-top:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 
-.button-services {
-  height: 80px;
-  width: 400px;
+
+
+
+.button-main{
+  position:absolute;
   margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 20px;
+  left:50%;
+  transform : translate(-50% ,-50%);
+  font-weight: 700;
 }
 
-@media (max-width:500px) {
-.button {
-  width: 300px;
-  font-size: 20px;
-  height: 70px;
-  padding: 20px;
+.btn1:link,
+.btn1:visited{
+  text-decoration: none;
+  text-transform:uppercase;
+  position:relative;
+  top:0;
+  left:0;
+  padding:20px 80px;
+  border-radius:100px;
+  display:inline-block;
+  transition: all .5s;
+}
+
+
+
+.btn1-white{
+  background-image: linear-gradient(to right, #11998e , #38ef7d);
+  color:#000;
+}
+.btn1-cta {
+  background-color: #212121;
+  color: white;
+  margin-top: 50px;
+}
+
+.btn1:hover{
+   box-shadow:0px 10px 10px rgba(0,0,0,0.2);
+   transform : translateY(-3px);
+   color: white;
+}
+
+.btn1:active{
+  box-shadow:0px 5px 10px rgba(0,0,0,0.2)
+  transform:translateY(-1px);
+}
+
+.btn1-bottom-animation-1{
+  animation:comeFromBottom 1s ease-out .8s;
+}
+
+.btn1::after{
+  content:"";
+  text-decoration: none;
+  text-transform:uppercase;
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  border-radius:100px;
+  display:inline-block;
+  z-index:-1;
+  transition: all .5s;
+}
+
+.btn1-white::after {
+  background-image: linear-gradient(to right, #11998e , #38ef7d);
+}
+
+.btn1-cta::after {
+  background: #212121;
+}
+
+.btn1-animation-1:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+@keyframes comeFromBottom{
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  } 
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+@media (max-width:800px) {
+  .button-main{
+    position:absolute;
+    margin-top: 50px;
+    left: 50%;
+    transform : translate(-50% ,-50%);
+    font-size: 15px;
+   
+    
+  }
+
+  .btn1:link,
+.btn1:visited{
+ 
+  
+  padding:15px 30px;
+  
 }
 }
+
+
 
   /* 
 ========================
@@ -145,7 +276,7 @@ FLEXBOX
     
   }
 
-  @media (max-width:800px) {
+  @media (max-width:1200px) {
     .flex-container {
         flex-wrap: wrap;
         flex: 100%;
@@ -161,7 +292,7 @@ HOME HERO
 */
     .parallax {
         /* The image used */
-        background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://cms.qz.com/wp-content/uploads/2017/10/img_2811.jpg?quality=75&strip=all&w=1600&h=900&crop=1);
+        background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://res.cloudinary.com/djfz8onqu/image/upload/v1583430204/Peter%20Clark/a_boqfed.jpg);
       
         /* Set a specific height */
         min-height: 800px; 
@@ -181,24 +312,36 @@ HOME SERVICES
 */
 
 .services {
-  
-    margin-left: 100px;
-    margin-right: 100px;
+  /* The image used */
+  background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://res.cloudinary.com/djfz8onqu/image/upload/v1583430203/Peter%20Clark/SPMQ7206_k8asz6.jpg);
+
+ 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services {
+  padding-bottom: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .service1 {
     flex-basis: 33.33%;
-    background-color: #212121;
+    
 }
 
 .service2 {
     flex-basis: 33.33%;
-    background-color: #212121;
+    
 }
 
 .service3 {
     flex-basis: 33.33%;
-    background-color: #212121;
+    
 }
 
 @media (max-width:800px) {
@@ -271,7 +414,7 @@ HOME SERVICES
   transform: scale(0.1, 1);
 }
 .box-1 { 
-  background-color: rgba(0, 222, 89, 0.5); 
+  background-image:linear-gradient(to right, rgba(17,153,142,0.8), rgba(56,239,125,0.8));
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
@@ -322,8 +465,42 @@ HOME SERVICES
   padding: 20px 60px;
 }
 
+@media (max-width:1700px) {
 
-@media (max-width:600px) {
+  .text {
+    padding: 0;
+  }
+  
+  .box-1 {
+    background-color: rgba(0, 222, 89, 0.5);
+  }
+  
+  .container .image {
+    opacity: 0.3;
+  }
+  
+  .container .middle {
+    opacity: 1;
+  }
+
+  .btn {
+    
+    width: 200px;
+    
+  }
+
+  .box-1 {
+    padding: 20px;
+  }
+
+  .image {
+    padding: 0;
+  }
+  
+}
+
+
+@media (max-width:800px) {
 
 .text {
   padding: 0;
@@ -334,7 +511,7 @@ HOME SERVICES
 }
 
 .container .image {
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 .container .middle {
@@ -342,11 +519,22 @@ HOME SERVICES
 }
 
 .services {
-  margin: 0;
+  padding: 0;
+  padding-bottom: 100px;
 }
 .image {
 padding: 0px;
-padding-top: 10px;
+
+}
+
+.btn {
+    
+  width: 250px;
+  
+}
+
+.container {
+  padding: 0;
 }
 }
 
@@ -402,25 +590,28 @@ HOME GALLERY
 ========================
 */
 .home-gallery {
+  background-color: #212121;
   margin-left: 150px;
   margin-right: 150px;
+  margin-bottom: 150px;
 }
+
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 20px;
 }
 
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 25%;
   max-width: 25%;
-  padding: 0 4px;
+  padding: 0 20px;
 }
 
 .column img {
-  margin-top: 8px;
+  margin-top: 40px;
   vertical-align: middle;
   width: 100%;
 }
@@ -433,7 +624,24 @@ HOME GALLERY
   }
   .home-gallery {
     margin: 0;
+    padding-bottom: 100px;
   }
+
+  .row {
+
+  padding: 0 4px;
+}
+
+.column {
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 10px;
+  
+}
+
+ 
 }
 
 
@@ -444,17 +652,31 @@ HOME CTA
 */
 
 .cta {
-  background-color: #00DE59;
   height: 30vh;
-}
-
-@media screen and (max-width: 800px) {
-  .cta {
-   
-    height: 40vh;
+    /* The image used */
+    background-image:linear-gradient(to right, rgba(17,153,142,0.6), rgba(56,239,125,0.6)), url(https://res.cloudinary.com/djfz8onqu/image/upload/v1583430208/Peter%20Clark/GUGP6452_ieqtkr.jpg);
+  
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-}
+
+
+  @media screen and (max-width: 800px) {
+    .cta {
+      height: 30vh;
+    }
+   
+  }
+  
+  
+
+
+
 
 
 
@@ -465,21 +687,22 @@ FOOTER
 */
 footer {
   padding: 50px;
+  background-color: #212121;
 }
 
 .left {
   flex-basis: 33.33%;
-  background-color: #212121;
+
 }
 
 .center {
   flex-basis: 33.33%;
-  background-color: #212121;
+
 }
 
 .right {
   flex-basis: 33.33%;
-  background-color: #212121;
+  
 }
 
 @media (max-width:800px) {
@@ -497,6 +720,7 @@ footer {
 .end {
   background-color: black;
   font-size: 10px;
+  position: static;
 }
 
 
@@ -518,10 +742,11 @@ HOME HERO
 
 .parallax-about {
   /* The image used */
-  background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://thumbs-prod.si-cdn.com/_tN9htZHZVpEuC_41mJhOpX-QKM=/fit-in/1600x0/https://public-media.si-cdn.com/filer/06/9c/069cfb16-c46c-4742-85f0-3c7e45fa139d/mar2018_a05_talkingtrees.jpg);
+  background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://res.cloudinary.com/djfz8onqu/image/upload/v1583430204/Peter%20Clark/a_boqfed.jpg);
 
   /* Set a specific height */
   min-height: 400px; 
+  
 
 }
 
@@ -539,7 +764,8 @@ ABOUT US
 
 .about-img  {
   flex-basis: 50%;
-  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.mjc-treesurgeons.co.uk/wp-content/uploads/2018/09/shutterstock_345413507-3.jpg);
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://res.cloudinary.com/djfz8onqu/image/upload/v1583431024/Peter%20Clark/55_zelwnw.jpg);
+  background-size: cover;
 }
 
 .about-txt p {
@@ -548,8 +774,8 @@ ABOUT US
 }
 
 .about-img2 {
-  
-  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://conversation.which.co.uk/wp-content/uploads/2015/10/treesurgeon.png);
+  background-size: cover;
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://res.cloudinary.com/djfz8onqu/image/upload/v1583430208/Peter%20Clark/HLBW1209_davm26.jpg);
 }
 
 .box-2 {
@@ -564,7 +790,7 @@ ul {
 
 .about-txt ul li:before {
   content: '✓';
-  color: #00DE59;
+  color: #38ef7d;
   font-weight: 700;
   padding: 10px;
   font-size: 30px;
@@ -701,7 +927,7 @@ GALLERY
 
 .gallery-txt  {
   padding: 20px;
-  font-size: 10px;
+  font-size: 20px;
   
 }
 
@@ -725,4 +951,309 @@ GALLERY
 
 
  
+}
+
+
+
+
+  /* 
+================================================================
+SERVICES
+========================
+*/
+.section-services {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.section-services p {
+  padding: 50px;
+}
+
+.service {
+      flex-basis: 33.333%;   
+      height: 50vh;
+      background-size: cover;
+      background-position: center;
+}
+
+
+@media (max-width:1500px) {
+ 
+
+.section-services {
+  margin: 0;
+}
+
+}
+@media (max-width:1200px) {
+ 
+  .service {
+    flex-basis: 50%;
+}
+.section-services {
+  margin: 0;
+}
+
+}
+
+
+@media (max-width:900px) {
+  .service {
+    flex-basis: 100%;   
+    height: 50vh;
+}
+
+.section-services {
+  margin: 0;
+}
+}
+
+
+
+  /* 
+========================
+SERVICE IMAGES
+========================
+*/
+
+
+.service-a {
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://conversation.which.co.uk/wp-content/uploads/2015/10/treesurgeon.png);
+  
+}
+
+
+
+.service-b {
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.mjc-treesurgeons.co.uk/wp-content/uploads/2018/09/shutterstock_345413507-3.jpg);
+
+  
+}
+
+.service-c {
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.coastaltreecare.co.uk/wp-content/uploads/sites/15/2019/02/Setting-the-lowering-rope-1.jpg);
+  
+}
+
+.service-d {
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://coastaltreecare.co.uk/wp-content/uploads/sites/15/2015/11/Eucalyptus-dismantle.jpg);
+  
+}
+
+.service-e {
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://conversation.which.co.uk/wp-content/uploads/2015/10/treesurgeon.png);
+  
+}
+
+.service-f {
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.treeprofiles.co.uk/wp-content/uploads/2016/09/TreeFelling2GA.jpg);
+  
+}
+
+.service-g {
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://wallandtree.co.uk/wp-content/uploads/2019/09/keswick-tree-surgeon.png);
+  
+}
+
+.service-h {
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.herring-ltd.co.uk/wp-content/uploads/2018/04/tree-surgeons-derby.jpg);
+  
+}
+
+.service-i {
+  background-image:linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTKvLUFGEryocSeDArAday7Rv8Zke-eEegt1obhJgZVnL5NQJkg);
+  
+}
+
+  /* 
+========================
+SERVICE buttons
+========================
+*/
+
+.box-3 {
+  margin-top: 40%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media (max-width:900px) {
+  
+    .box-3 {
+      margin: 0;
+      margin-top: 35%;
+     
+    }
+}
+
+
+
+
+  /* 
+================================================================
+CONTACT PAGE
+========================
+*/
+
+
+.contact-us {
+  /* The image used */
+  background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://aluminiumtoday.com/imager/news/40205/hero-aerial-forest-evergreen-trees_46527c80523046a5c0b3b8e30581599a.jpg);
+padding-left: 150px;
+padding-right: 150px;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact {
+  flex-basis: 50%;
+}
+
+.contact-us h3 {
+  font-size: 40px;
+}
+
+.contact-us h3 span {
+  font-weight: 700;
+}
+
+.contact-img img {
+  opacity: 0.5;
+}
+
+.contact-txt {
+  margin-top: 100px;
+}
+
+
+@media (max-width:1200px) {
+ 
+  .contact {
+    flex-basis: 100%;
+}
+
+.contact-us {
+  padding: 0;
+}
+
+.contact-us h3 {
+  font-size: 20px;
+}
+
+.contact-us h3 span {
+  font-weight: 700;
+}
+
+.contact-txt {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.contact-img {
+  display: none;
+}
+}
+
+
+
+
+
+
+.heartbeat {
+  padding: 20px 30px 20px 30px;
+  width: 110px;
+  border-radius: 60px;
+  margin: 10px;
+  border: 1px;
+  background-color:rgba(255,255,255,0.95);
+  font-size: 3rem;
+}
+
+.fa:hover {
+ 
+background: -webkit-linear-gradient( #11998e,#38ef7d);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+transition: 0.5s;  
+}
+
+.heartbeat:hover {
+-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+        animation: heartbeat 1.5s ease-in-out infinite both;
+        box-shadow: 5px 5px #11998e;
+}
+
+
+@-webkit-keyframes heartbeat {
+from {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+10% {
+  -webkit-transform: scale(0.91);
+          transform: scale(0.91);
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+17% {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+33% {
+  -webkit-transform: scale(0.87);
+          transform: scale(0.87);
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+45% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+}
+@keyframes heartbeat {
+from {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+10% {
+  -webkit-transform: scale(0.91);
+          transform: scale(0.91);
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+17% {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+33% {
+  -webkit-transform: scale(0.87);
+          transform: scale(0.87);
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+45% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
