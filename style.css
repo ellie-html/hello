@@ -766,7 +766,7 @@ HOME HERO
   background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://res.cloudinary.com/djfz8onqu/image/upload/v1583430204/Peter%20Clark/a_boqfed.jpg);
 
   /* Set a specific height */
-  min-height: 400px; 
+  height: 40vh; 
   
 
 }
@@ -1173,8 +1173,8 @@ padding-right: 150px;
 }
 
 .contact-txt {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .contact-img {
