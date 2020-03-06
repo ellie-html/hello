@@ -1125,7 +1125,7 @@ CONTACT PAGE
 padding-left: 150px;
 padding-right: 150px;
 
-
+height: 80vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -1159,6 +1159,7 @@ padding-right: 150px;
 
 .contact-us {
   padding: 0;
+  height: 100vh;
 }
 
 .contact-us h3 {
