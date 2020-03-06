@@ -45,6 +45,7 @@ h1 span {
 }
 
 .titles {
+  padding-top:80px;
   background: linear-gradient(to right, #11998e 0%, #38ef7d 100%);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -254,7 +255,7 @@ NAV BAR
 ========================
 */
 .navbar {
-
+  
     font-size: 20px;
     
 }
@@ -356,12 +357,19 @@ HOME SERVICES
 @media (max-width:800px) {
     .service1 {
         flex-basis: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+       
     }
     .service2 {
         flex-basis: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .service3 {
         flex-basis: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .services {
@@ -433,7 +441,7 @@ HOME SERVICES
   padding-right: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
-  
+  border-radius: 25px;
 }
 
 .container {
@@ -473,19 +481,16 @@ HOME SERVICES
 }
 
 .text {
-  background-color: rgba(255,255,255,0.2);
+  
   color: black;
   font-size: 26px;
-  padding: 20px 60px;#
+
 
 }
 
 
 @media (max-width:1700px) {
 
-  .text {
-    padding: 0;
-  }
   
   
   
@@ -516,9 +521,6 @@ HOME SERVICES
 
 @media (max-width:800px) {
 
-.text {
-  padding: 0;
-}
 
 
 
@@ -918,7 +920,7 @@ GALLERY
 /* Container for image text */
 .caption-container {
   text-align: center;
-  background-color: rgba(0, 222, 89, 0.5);
+  background-image: linear-gradient(to right, #11998e , #38ef7d);
   padding: 2px 16px;
   color: white;
   font-size: 20px;
