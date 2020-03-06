@@ -558,7 +558,7 @@ HOME TESTIMONIALS
 ========================
 */
 .testimonials-parallax {
-height: 30vh;
+height: 90vh;
 }
 .carousel-inner img {
   border-radius: 50%;
@@ -594,6 +594,15 @@ height: 30vh;
   .testimonials h2 {
     padding-top: 100px;
   }
+
+ 
+}
+
+@media (max-width:1000px) {
+.testimonials-parallax {
+  background-image:linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://res.cloudinary.com/djfz8onqu/image/upload/v1583430204/Peter%20Clark/a_boqfed.jpg);
+  height: 80vh;
+}
 }
 
   /* 
