@@ -45,7 +45,7 @@ h1 span {
 }
 
 .titles {
-  padding-top:80px;
+  padding-top:100px;
   background: linear-gradient(to right, #11998e 0%, #38ef7d 100%);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -337,7 +337,10 @@ HOME SERVICES
   padding-bottom: 150px;
     padding-left: 100px;
     padding-right: 100px;
+    
 }
+
+
 
 .service1 {
     flex-basis: 33.33%;
@@ -452,7 +455,7 @@ HOME SERVICES
 }
 
 .image {
-  opacity: 1;
+  opacity: 0.7;
   display: block;
   width: 100%;
   height: auto;
@@ -494,9 +497,7 @@ HOME SERVICES
   
   
   
-  .container .image {
-    opacity: 0.3;
-  }
+
   
   .container .middle {
     opacity: 1;
@@ -524,9 +525,6 @@ HOME SERVICES
 
 
 
-.container .image {
-  opacity: 0.8;
-}
 
 .container .middle {
   opacity: 1;
@@ -1123,7 +1121,7 @@ CONTACT PAGE
 
 .contact-us {
   /* The image used */
-  background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://aluminiumtoday.com/imager/news/40205/hero-aerial-forest-evergreen-trees_46527c80523046a5c0b3b8e30581599a.jpg);
+  background-image:linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://res.cloudinary.com/djfz8onqu/image/upload/v1583430209/Peter%20Clark/DEGE6766_fycce8.jpg);
 padding-left: 150px;
 padding-right: 150px;
 
@@ -1136,19 +1134,16 @@ padding-right: 150px;
 }
 
 .contact {
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .contact-us h3 {
   font-size: 40px;
+  
 }
 
 .contact-us h3 span {
   font-weight: 700;
-}
-
-.contact-img img {
-  opacity: 0.5;
 }
 
 .contact-txt {
@@ -1179,9 +1174,8 @@ padding-right: 150px;
   margin-bottom: 50px;
 }
 
-.contact-img {
-  display: none;
-}
+
+
 }
 
 
